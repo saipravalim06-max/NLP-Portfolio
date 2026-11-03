@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Pravali Motamarri | NLP Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090b12;--surface:#111522;--surface2:#171c2b;--text:#f3f4f8;--muted:#9299ad;--line:#262d40;--accent:#b7f36b;--accent2:#8d8bff;--pink:#ff8bb8;--shadow:0 24px 70px #0006}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 'DM Sans',sans-serif;transition:background .25s,color .25s;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:radial-gradient(var(--muted) .6px,transparent .6px);background-size:22px 22px;mask-image:linear-gradient(to bottom,black,transparent 75%);z-index:-1}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+.mono{font:12px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font:700 18px 'Space Grotesk';letter-spacing:-.05em}.brand span{color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:25px}
+.navlinks a{font-size:13px;color:var(--muted);transition:.2s}.navlinks a:hover{color:var(--accent)}
+h1,h2,h3,p{margin-top:0}
+/* hero */
+.hero{min-height:660px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding:80px 0 90px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--accent);font:12px 'DM Mono';letter-spacing:.12em;text-transform:uppercase}
+.dot{width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 16px var(--accent)}
+h1{font:600 clamp(54px,8vw,100px)/.94 'Space Grotesk';letter-spacing:-.08em;margin:25px 0}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-copy{max-width:560px;color:var(--muted);font-size:17px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0}
+.pill{border:1px solid var(--line);border-radius:30px;padding:8px 13px;font:11px 'DM Mono';color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 18px;border-radius:9px;background:var(--accent);color:#11170b;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:10px;border:1px solid var(--accent)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.hero-art{min-height:420px;display:grid;place-items:center}
+.orbit{width:min(390px,80vw);aspect-ratio:1;border:1px solid var(--line);border-radius:50%;position:relative;display:grid;place-items:center;background:radial-gradient(circle,var(--surface2),transparent 68%)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed var(--line);border-radius:50%;inset:12%}.orbit:after{inset:25%}
+.core{width:140px;height:140px;border-radius:38px;transform:rotate(-8deg);background:linear-gradient(145deg,var(--accent),#d8ff9e);color:#11170b;display:grid;place-items:center;font:700 56px 'Space Grotesk';box-shadow:0 0 70px color-mix(in srgb,var(--accent) 30%,transparent);z-index:2}
+.float{position:absolute;padding:11px 14px;border:1px solid var(--line);background:var(--surface);border-radius:12px;box-shadow:var(--shadow);font:12px 'DM Mono';z-index:3}
+.f1{top:12%;left:-3%}.f2{right:-4%;top:29%}.f3{bottom:13%;left:2%}.f4{bottom:8%;right:0;color:var(--accent)}
+/* sections */
+section{padding:90px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+.section-head h2{font:600 clamp(34px,5vw,55px)/1 'Space Grotesk';letter-spacing:-.06em;margin:8px 0 0}
+.section-head p{max-width:420px;color:var(--muted);font-size:14px;margin:0}
+.num{color:var(--accent);font:12px 'DM Mono'}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;position:relative;overflow:hidden}
+.card h3{font:600 20px 'Space Grotesk';letter-spacing:-.04em;margin:10px 0}
+.card p{color:var(--muted);font-size:14px;margin-bottom:0}
+.wide{grid-column:span 7}.narrow{grid-column:span 5}.half{grid-column:span 6}.third{grid-column:span 4}.full{grid-column:span 12}
+.taglist{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}
+.tag{font:10px 'DM Mono';border:1px solid var(--line);border-radius:30px;padding:5px 9px;color:var(--muted)}
+/* quiet star rows */
+.rec{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.rec:last-child{border:0;padding-bottom:0}.rec:first-of-type{padding-top:6px}
+.rec b{font:600 16px 'Space Grotesk';letter-spacing:-.03em}.rec span{display:block;color:var(--muted);font-size:13px}
+.rec .st{font:12px 'DM Mono';color:var(--accent);white-space:nowrap;border:1px solid var(--line);border-radius:30px;padding:6px 11px}
+.icon{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--surface2);display:grid;place-items:center;color:var(--accent);font:15px 'DM Mono'}
+.row{display:flex;gap:16px;align-items:flex-start}.row h3{margin:0 0 6px}
+.quote{font:500 25px/1.25 'Space Grotesk';letter-spacing:-.04em;margin:16px 0}.quote span{color:var(--accent)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.meaning{background:var(--surface2);border-radius:10px;padding:13px}
+.meaning b{display:block;font:10px 'DM Mono';text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.meaning p{font-size:13px}
+.big{font:600 28px/1.1 'Space Grotesk';letter-spacing:-.05em;margin:10px 0}.big span{color:var(--accent)}
+.soon{border:1px dashed var(--line);border-radius:10px;padding:13px;margin-top:15px;color:var(--muted);font-size:13px}
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0 0}
+.resource b{font:600 15px 'Space Grotesk'}.resource span{display:block;color:var(--muted);font-size:12px}
+.arrow{color:var(--accent);font-size:22px}
+a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
+.project{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,48px);position:relative;overflow:hidden}
+.project:after{content:"CI";position:absolute;right:0;top:-70px;font:700 260px 'Space Grotesk';color:var(--line);opacity:.35;pointer-events:none}
+.project>*{position:relative;z-index:1}
+.project h3{font:600 clamp(30px,5vw,46px)/1 'Space Grotesk';letter-spacing:-.06em;max-width:650px;margin:20px 0 14px}
+.project p{color:var(--muted);max-width:650px}
+.project-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.project-links a{border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-size:12px}
+.footer{padding:60px 0 70px;text-align:center}
+.footer h2{font:600 clamp(35px,6vw,62px)/1 'Space Grotesk';letter-spacing:-.07em;margin:12px}
+.footer p{color:var(--muted);font-size:14px}
+.signature{color:var(--accent);font:12px 'DM Mono';margin-top:25px}
+.tb{margin:12px auto 0;max-width:380px;background:var(--surface2);border-radius:12px;padding:14px 16px;text-align:center}
+.tb-word{font:700 clamp(26px,5vw,36px)/1.25 'Noto Sans Telugu',sans-serif;color:var(--accent)}
+.tb-rom{font:11px 'DM Mono';color:var(--muted);letter-spacing:.05em}
+.tb-mean{font:600 15px 'Space Grotesk';margin:4px 0 8px}
+.tb-parts{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;min-height:26px;margin-bottom:10px}
+.tb-parts .tag{font-size:10px;padding:4px 9px}
+.tb .btn{padding:7px 14px;font-size:12px}
+.pgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.verse{display:flex;flex-direction:column;gap:8px}
+.vl{background:var(--surface2);border:1px solid var(--line);color:var(--text);text-align:left;padding:13px 16px;border-radius:12px;font:500 18px/1.4 'Noto Sans Telugu',sans-serif;cursor:pointer;transition:.2s}
+.vl:hover{border-color:var(--accent)}
+.vl.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface2))}
+.vmean{background:var(--surface2);border-radius:12px;padding:20px;display:flex;flex-direction:column;justify-content:center}
+.vmean p{font:500 20px/1.35 'Space Grotesk';color:var(--text);margin:8px 0 0}
+@media(max-width:760px){.pgrid{grid-template-columns:1fr}}
+.pick{cursor:pointer;background:none;color:var(--text);font-size:13px;padding:5px 13px}.pick.on{border-color:var(--accent);color:var(--accent)}
+.mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;margin:26px 0 6px}
+.mods .card{padding:20px}.mods .card h3{font-size:18px}
+.vid{margin-top:26px;width:100%;max-width:560px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.vid iframe{width:100%;height:100%;border:0}
+.contrib{margin-top:24px;width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.project .contrib p{max-width:none}
+.contrib ul{margin:0;padding-left:20px;color:var(--muted);font-size:15px}.contrib li{margin:7px 0}.contrib b{color:var(--text)}
+.media{display:grid;grid-template-columns:3fr 2fr;gap:16px;margin-top:26px;align-items:stretch}
+.media .vid{margin-top:0;max-width:none}
+.shot{margin:0;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:200px}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font:11px 'DM Mono';letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,#000b)}
+@media(max-width:760px){.media{grid-template-columns:1fr}.shot{aspect-ratio:4/3}}
+.te{font-family:'Noto Sans Telugu','DM Sans',sans-serif}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:760px){.navlinks{gap:16px;overflow-x:auto;white-space:nowrap}.hero{grid-template-columns:1fr;padding:60px 0 70px;gap:10px}.hero-art{min-height:340px}.section-head{display:block}.section-head p{margin-top:15px}.wide,.narrow,.half,.third{grid-column:span 12}}
+@media(max-width:420px){.wrap{width:calc(100% - 30px)}.split{grid-template-columns:1fr}.core{width:115px;height:115px;font-size:45px}.float{font-size:10px;padding:8px 10px}.rec{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><nav class="wrap"><a class="brand" href="#home">sp<span>.</span>nlp</a>
+<div class="navlinks"><a href="#class">Classroom</a><a href="#language">Language</a><a href="#activities">Activities</a><a href="#project">Project</a></div>
+</nav></header>
+
+<main class="wrap">
+<section class="hero" id="home" style="border:0">
+<div>
+<div class="eyebrow"><i class="dot"></i> NLP PORTFOLIO · VIT</div>
+<h1>Sai<br>Pravali<span>.</span><br><em>Motamarri</em></h1>
+<p class="hero-copy">A record of what I solved, asked and built in NLP this semester, from edit distance to Telugu morphology.</p>
+<div class="hero-meta"><span class="pill">23MIC0086</span><span class="pill">INTEGRATED M.TECH · CSE</span><span class="pill">NATURAL LANGUAGE PROCESSING</span></div>
+<div class="actions"><a class="btn" href="#project">See my project ↗</a><a class="btn ghost" href="#class">Classroom moments ↓</a></div>
+</div>
+<div class="hero-art" aria-hidden="true"><div class="orbit"><div class="core">Aa</div><div class="float f1">01 / MORPHOLOGY</div><div class="float f2">meaning ≠ words</div><div class="float f3">[ language ]</div><div class="float f4">NLP ✳</div></div></div>
+</section>
+
+<section id="class" class="reveal">
+<div class="section-head"><div><div class="num">01 / CLASSROOM</div><h2>Small moments.<br>Real learning.</h2></div><p>Problems I solved and questions I answered during lectures.</p></div>
+<div class="grid">
+<article class="card full"><div class="mono">PROBLEM SOLVING</div><h3>Recognition in class</h3>
+<div class="rec"><div><b>Minimum edit distance</b><span>CAT 1 question, solved with dynamic programming</span></div><div class="st">★★★ · Very Good</div></div>
+<div class="rec"><div><b>Viterbi algorithm</b><span>Solved in class and shown to faculty</span></div><div class="st">★</div></div>
+<div class="rec"><div><b>Challenges in NLP</b><span>Answered in class: neologism</span></div><div class="st">★</div></div>
+<div class="rec"><div><b>Morphology vocabulary</b><span>Listed five morphology terms in class</span></div><div class="st">★</div></div></article>
+
+
+<article class="card half"><div class="row"><div class="icon">?</div><div><h3>Challenges in NLP</h3><p>Asked what challenges NLP faces, I answered <b>neologism</b>: new words appear every day, and a model has to keep up with words it has never seen.</p><div class="taglist"><span class="tag">NEOLOGISM</span><span class="tag">VOCABULARY</span><span class="tag">UNSEEN WORDS</span></div></div></div></article>
+<article class="card half"><div class="row"><div class="icon">Aa</div><div><h3>Morphology vocabulary</h3><p>Asked to list five terms from our morphology discussions, I named:</p><div class="taglist"><span class="tag">FINITE-STATE TRANSDUCERS</span><span class="tag">PARSING</span><span class="tag">LEXICAL</span><span class="tag">SYNTACTIC</span><span class="tag">INFLECTION</span></div></div></div></article>
+
+<article class="card full"><div class="row"><div class="icon">♂♀</div><div><h3>A question from the hands-on session</h3><p>During a hands-on session, while testing a name classifier, I asked why “Sai”, a name mostly used for men, was labelled female. Conclusion: the classifier has limitations, because it only knows what its training data showed it.</p><div class="taglist"><span class="tag">CLASSIFICATION</span><span class="tag">BIAS</span><span class="tag">MODEL LIMITATIONS</span></div></div></div></article>
+</div>
+</section>
+
+<section id="language" class="reveal">
+<div class="section-head"><div><div class="num">02 / LANGUAGE IN CONTEXT</div><h2>Meaning is not<br>always literal.</h2></div><p>Examples from class, and what we said language is.</p></div>
+<div class="grid">
+<article class="card half"><div class="mono">METAPHOR</div><div class="quote">“Life is a <span>rollercoaster.</span>”</div><div class="split"><div class="meaning"><b>Literal reading</b><p>Life is an amusement-park ride.</p></div><div class="meaning"><b>Intended meaning</b><p>Life has unexpected ups and downs.</p></div></div></article>
+<article class="card half"><div class="mono">IDIOM</div><div class="quote">“Cut me some <span>slack.</span>”</div><div class="split"><div class="meaning"><b>Literal reading</b><p>Loosen a length of rope.</p></div><div class="meaning"><b>Intended meaning</b><p>Be patient and don’t judge me too harshly.</p></div></div></article>
+
+<article class="card third"><div class="mono">LANGUAGE IS…</div><div class="big"><span>a necessity.</span></div><p>My answer in class. Without it we cannot share needs, plans or warnings.</p></article>
+<article class="card third"><div class="mono">LANGUAGE IS…</div><div class="big"><span>infinite.</span></div><p>Discussed in class. A few rules and a finite vocabulary can build sentences nobody has said before.</p></article>
+<article class="card third"><div class="mono">LANGUAGE IS…</div><div class="big"><span>identity.</span></div><p>Discussed in class. Our mother tongue carries where we come from.</p></article>
+
+<article class="card full"><div class="mono te">MOTHER TONGUE · TELUGU</div><h3>Understanding language through my own.</h3><p>Telugu builds new words by attaching small meaningful pieces to a root. Pick a word, then press the button to see how its meaning flips.</p>
+<div class="taglist te" id="tbPick" style="justify-content:center;margin:16px 0 0">
+<button type="button" class="tag pick on" data-i="0">ఆరోగ్యం</button><button type="button" class="tag pick" data-i="1">గుణము</button><button type="button" class="tag pick" data-i="2">న్యాయం</button></div>
+<div class="tb te" id="tb" aria-live="polite">
+<div class="tb-word" id="tbWord"></div>
+<div class="tb-rom" id="tbRom"></div>
+<div class="tb-mean" id="tbMean"></div>
+<div class="tb-parts" id="tbParts"></div>
+<button class="btn ghost" id="tbBtn" type="button">Add the prefix ＋</button>
+</div></article>
+</div>
+</section>
+
+<section id="activities" class="reveal">
+<div class="section-head"><div><div class="num">03 / ACTIVITIES</div><h2>From class<br>to code.</h2></div><p>Hands-on sessions and class activities.</p></div>
+<div class="grid">
+<a class="card half" href="https://github.com/saipravalim06-max/NLP-Hands-On-.git" target="_blank" rel="noopener"><div class="mono">HANDS-ON SESSIONS</div><h3>NLP hands-on code</h3><p>Notebooks and code from our practical sessions, on GitHub.</p><div class="resource"><div><b>NLP-Hands-On repository</b><span>github.com/saipravalim06-max</span></div><span class="arrow">↗</span></div></a>
+<a class="card half" href="NLP_DA.pdf" target="_blank" rel="noopener"><div class="mono">CASE STUDY · CSI4001</div><h3>Embeddings in NLP</h3><p>How embeddings are built, the baselines they are compared with, and the embeddings available for Indian languages.</p><div class="resource"><div><b>Read the case study</b><span>PDF</span></div><span class="arrow">↗</span></div></a>
+<article class="card full poem"><div class="mono">POETRY · TELUGU</div>
+<h3 class="te" style="font-size:34px;margin-bottom:2px">ఉప్పు కప్పురంబు</h3>
+<p class="mono" style="margin-bottom:18px">Uppu Kappurambu · Yogi Vemana · Vemana Padyalu</p>
+<div class="pgrid">
+<div class="verse te" role="list" aria-label="Verse lines">
+<button type="button" class="vl on" data-i="0">ఉప్పు కప్పురంబు నొక్క పోలికనుండు</button>
+<button type="button" class="vl" data-i="1">చూడ చూడ రుచుల జాడ వేరు</button>
+<button type="button" class="vl" data-i="2">పురుషులందు పుణ్య పురుషులు వేరయ</button>
+<button type="button" class="vl" data-i="3">విశ్వదాభిరామ వినుర వేమ</button>
+<span class="mono" style="margin-top:10px;display:block">Tap a line to read it</span>
+</div>
+<div class="vmean" aria-live="polite"><div class="mono" id="vRom"></div><p id="vEn"></p></div>
+</div>
+<div class="split" style="margin-top:20px">
+<div class="meaning"><b>The idea</b><p>Salt and camphor are both white crystals, so they look the same. Taste them and they are nothing alike. People are the same: judge by character, not by appearance.</p></div>
+<div class="meaning"><b>LLM-generated meaning</b><p>Salt and camphor look alike, yet look again and their tastes part ways. So it is with people: the truly good stand apart. Listen, Vema.</p></div>
+</div>
+<div class="taglist"><span class="tag">POET · YOGI VEMANA</span><span class="tag">SOURCE · VEMANA PADYALU</span><span class="tag">ERA · 17TH–18TH C. (DATES UNCERTAIN)</span><span class="tag">THEME · APPEARANCE VS CHARACTER</span></div>
+<p style="margin-top:18px"><b style="color:var(--text)">Why it belongs in NLP:</b> the poem is a lesson in <em>meaning ≠ words</em>. A translator has to carry the image of two look-alike crystals, not just the vocabulary, or the moral disappears.</p>
+</article>
+</div>
+</section>
+
+<section id="project" class="reveal">
+<div class="section-head"><div><div class="num">04 / PROJECT</div><h2>Built to solve<br>a real problem.</h2></div><p>The NLP project our team built for the course.</p></div>
+<div class="project"><div class="eyebrow"><i class="dot"></i> NLP PROJECT · TEAM OF THREE</div>
+<h3>Compliance Intelligence Platform</h3>
+<p>An NLP-based approach to contract compliance and state policy analysis. It combines NLP with rule-based reasoning to check contract clauses against internal policies and state regulations, and shows the supporting clause as evidence.</p>
+<div class="mods">
+<div class="card"><div class="mono">MODULE 1</div><h3>State Fit Advisor</h3><p>Evaluates a company profile against 93 state policy requirements and marks each one PASS, FAIL, UNKNOWN or POTENTIAL.</p></div>
+<div class="card"><div class="mono">MODULE 2</div><h3>Contract vs Internal Policies</h3><p>Finds clauses that clash with internal policy. Example: a 30-day termination notice against a 60-day minimum.</p></div>
+<div class="card"><div class="mono">MODULE 3</div><h3>Contract vs State Regulations</h3><p>Retrieves relevant regulations and flags possible conflicts for legal review, with source references.</p></div>
+</div>
+<div class="taglist"><span class="tag">93 STATE REQUIREMENTS</span><span class="tag">CUAD · 510 CONTRACTS</span><span class="tag">21 SYNTHETIC INTERNAL POLICIES</span><span class="tag">SENTENCE-TRANSFORMERS + RULE-BASED CONFLICT ENGINE</span><span class="tag">TAMIL NADU + KARNATAKA</span><span class="tag">STREAMLIT INTERFACE</span></div>
+<div class="media"><div class="vid"><iframe src="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/preview" title="Compliance Intelligence Platform demo video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><figure class="shot"><img src="presenting.jpeg" alt="Presenting the Compliance Intelligence Platform to the class" loading="lazy"><figcaption>Presenting the project in class</figcaption></figure></div>
+<p class="mono" style="margin:22px 0 4px">TEAM</p><p style="margin:0;color:var(--text)">Sai Pravali Motamarri · G. Varsha · Varanasi Sreeja</p>
+<div class="contrib"><div class="mono">MY CONTRIBUTION</div>
+<p style="color:var(--text);font-size:16px;margin:10px 0 0;line-height:1.7">I worked across all three modules of the platform and the pipeline that connects them. On State Policy Fit, I mapped government policies to startup eligibility criteria. On Contract Clause Analysis, I identified relevant clauses and flagged potential conflicts. On Statutory Compliance, I detected conflicts with state regulations and generated compliance advisories. I also built the compliance rule mapping, integrated the NLP pipeline end to end, tested and debugged the modules, and managed the GitHub repository.</p></div>
+<div class="project-links"><a href="COMPLIANCE-INTELLIGENCE-PLATFORM.pptx" download>▤ Download the slides</a><a href="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/view?usp=sharing" target="_blank" rel="noopener">▶ Watch the demo video ↗</a><a href="NLP_Project_Write_up.pdf" target="_blank" rel="noopener">❏ Read the write-up</a></div></div>
+</section>
+
+<section class="footer reveal"><div class="num">THANK YOU</div><h2>Language is<br><span style="color:var(--accent)">worth asking about.</span></h2><p>Every question in class taught me something about how machines read us.</p>
+<div class="signature">SAI PRAVALI MOTAMARRI · 23MIC0086 · NLP PORTFOLIO</div></section>
+</main>
+
+<script>
+const VL=[["Uppu kappurambu nokka polikanundu","Salt and camphor look alike."],["Chooda chooda ruchula jaada veru","Look closer and closer: their tastes are different."],["Purushulandu punya purushulu verayaa","Among people, the virtuous are different too."],["Viswadabhirama vinura Vema","O Viswadabhirama, listen, Vema. (Vemana’s signature line.)"]];
+const vb=[...document.querySelectorAll('.vl')];
+function showV(i){vb.forEach((b,k)=>b.classList.toggle('on',k==i));g0('vRom').textContent=VL[i][0];g0('vEn').textContent=VL[i][1]}
+function g0(id){return document.getElementById(id)}
+vb.forEach(b=>b.addEventListener('click',()=>showV(+b.dataset.i)));showV(0);
+const TP=[
+{w:'ఆరోగ్యం',r:'Ārōgyam',m:'health',n:'అనారోగ్యం',nr:'Anārōgyam',nm:'illness · not healthy',p:['అన్ = not','ఆరోగ్యం = health']},
+{w:'గుణము',r:'Guṇamu',m:'good quality',n:'విగుణము',nr:'Viguṇamu',nm:'bad quality',p:['వి = opposite','గుణము = good quality']},
+{w:'న్యాయం',r:'Nyāyaṃ',m:'justice',n:'అన్యాయం',nr:'Anyāyaṃ',nm:'injustice',p:['అ = not','న్యాయం = justice']}];
+let tbI=0,tbOn=false;const g=id=>document.getElementById(id);
+function tbDraw(){const d=TP[tbI];
+g('tbWord').textContent=tbOn?d.n:d.w;g('tbRom').textContent=tbOn?d.nr:d.r;g('tbMean').textContent=tbOn?d.nm:d.m;
+g('tbParts').innerHTML=tbOn?d.p.map((x,k)=>(k?'<span class="tag">+</span>':'')+'<span class="tag">'+x+'</span>').join(''):'';
+g('tbBtn').textContent=tbOn?'Remove the prefix −':'Add the prefix ＋';
+document.querySelectorAll('.pick').forEach((b,k)=>b.classList.toggle('on',k==tbI))}
+g('tbBtn').addEventListener('click',()=>{tbOn=!tbOn;tbDraw()});
+document.querySelectorAll('.pick').forEach(b=>b.addEventListener('click',()=>{tbI=+b.dataset.i;tbOn=false;tbDraw()}));
+tbDraw();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
