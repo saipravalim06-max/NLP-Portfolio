@@ -112,6 +112,8 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
 .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font:11px 'DM Mono';letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,#000b)}
 @media(max-width:760px){.media{grid-template-columns:1fr}.shot{aspect-ratio:4/3}}
+.sim{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.sim div{flex:1 1 180px;background:var(--surface2);border-radius:10px;padding:12px 14px}.sim b{display:block;font:600 24px 'Space Grotesk';color:var(--accent)}.sim span{font-size:12px;color:var(--muted)}
+.mt{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}.mt th,.mt td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}.mt th{font:11px 'DM Mono';color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.mt td:nth-child(2),.mt td:nth-child(3){color:var(--accent);white-space:nowrap}
 .te{font-family:'Noto Sans Telugu','DM Sans',sans-serif}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -149,7 +151,7 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 <article class="card half"><div class="row"><div class="icon">?</div><div><h3>Challenges in NLP</h3><p>Asked what challenges NLP faces, I answered <b>neologism</b>: new words appear every day, and a model has to keep up with words it has never seen.</p><div class="taglist"><span class="tag">NEOLOGISM</span><span class="tag">VOCABULARY</span><span class="tag">UNSEEN WORDS</span></div></div></div></article>
 <article class="card half"><div class="row"><div class="icon">Aa</div><div><h3>Morphology vocabulary</h3><p>Asked to list five terms from our morphology discussions, I named:</p><div class="taglist"><span class="tag">FINITE-STATE TRANSDUCERS</span><span class="tag">PARSING</span><span class="tag">LEXICAL</span><span class="tag">SYNTACTIC</span><span class="tag">INFLECTION</span></div></div></div></article>
 
-<article class="card full"><div class="row"><div class="icon">♂♀</div><div><h3>A question from the hands-on session</h3><p>During a hands-on session, while testing a name classifier, I asked why “Sai”, a name mostly used for men, was labelled female. Conclusion: the classifier has limitations, because it only knows what its training data showed it.</p><div class="taglist"><span class="tag">CLASSIFICATION</span><span class="tag">BIAS</span><span class="tag">MODEL LIMITATIONS</span></div></div></div></article>
+<article class="card full"><div class="row"><div class="icon">♂♀</div><div><h3>A question from the hands-on session</h3><p>During a hands-on session, while testing a name classifier, I asked why “Sai”, a name mostly used for men, was labelled female. Faculty’s conclusion: the classifier has limitations, because it only knows what its training data showed it.</p><div class="taglist"><span class="tag">CLASSIFICATION</span><span class="tag">BIAS</span><span class="tag">MODEL LIMITATIONS</span></div></div></div></article>
 </div>
 </section>
 
@@ -196,8 +198,17 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 </div>
 <div class="split" style="margin-top:20px">
 <div class="meaning"><b>The idea</b><p>Salt and camphor are both white crystals, so they look the same. Taste them and they are nothing alike. People are the same: judge by character, not by appearance.</p></div>
+<div class="meaning"><b>Context</b><p>Vemana wrote short moral verses in everyday Telugu. Each one ends with the signature line “Viswadabhirama Vinura Vema”, which names him as the poet.</p></div>
+</div>
+<div class="split" style="margin-top:12px">
+<div class="meaning"><b>Literal meaning (word for word)</b><p>Salt and camphor stay with one likeness. Look, look: the trace of tastes is different. Among men, virtuous men are different. Viswadabhirama, listen, Vema.</p></div>
 <div class="meaning"><b>LLM-generated meaning</b><p>Salt and camphor look alike, yet look again and their tastes part ways. So it is with people: the truly good stand apart. Listen, Vema.</p></div>
 </div>
+<div class="sim"><div><b>47%</b><span>Lexical similarity (word-overlap cosine)</span></div><div><b>High</b><span>Semantic similarity: both carry the same moral</span></div></div>
+<table class="mt"><thead><tr><th></th><th>Accuracy</th><th>Fluency</th><th>Note</th></tr></thead><tbody>
+<tr><td>Literal</td><td>5 / 5</td><td>3 / 5</td><td>Keeps every word, but reads stiffly in English.</td></tr>
+<tr><td>LLM</td><td>4 / 5</td><td>5 / 5</td><td>Reads naturally, but drops the address to Viswadabhirama.</td></tr>
+</tbody></table>
 <div class="taglist"><span class="tag">POET · YOGI VEMANA</span><span class="tag">SOURCE · VEMANA PADYALU</span><span class="tag">ERA · 17TH–18TH C. (DATES UNCERTAIN)</span><span class="tag">THEME · APPEARANCE VS CHARACTER</span></div>
 <p style="margin-top:18px"><b style="color:var(--text)">Why it belongs in NLP:</b> the poem is a lesson in <em>meaning ≠ words</em>. A translator has to carry the image of two look-alike crystals, not just the vocabulary, or the moral disappears.</p>
 </article>
@@ -215,7 +226,7 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 <div class="card"><div class="mono">MODULE 3</div><h3>Contract vs State Regulations</h3><p>Retrieves relevant regulations and flags possible conflicts for legal review, with source references.</p></div>
 </div>
 <div class="taglist"><span class="tag">93 STATE REQUIREMENTS</span><span class="tag">CUAD · 510 CONTRACTS</span><span class="tag">21 SYNTHETIC INTERNAL POLICIES</span><span class="tag">SENTENCE-TRANSFORMERS + RULE-BASED CONFLICT ENGINE</span><span class="tag">TAMIL NADU + KARNATAKA</span><span class="tag">STREAMLIT INTERFACE</span></div>
-<div class="media"><div class="vid"><iframe src="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/preview" title="Compliance Intelligence Platform demo video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><figure class="shot"><img src="presenting.jpeg" alt="Presenting the Compliance Intelligence Platform to the class" loading="lazy"><figcaption>Presenting the project in class</figcaption></figure></div>
+<div class="media"><div class="vid"><iframe src="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/preview" title="Compliance Intelligence Platform demo video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><figure class="shot"><img src="presenting.jpg" alt="Presenting the Compliance Intelligence Platform to the class" loading="lazy"><figcaption>Presenting the project in class</figcaption></figure></div>
 <p class="mono" style="margin:22px 0 4px">TEAM</p><p style="margin:0;color:var(--text)">Sai Pravali Motamarri · G. Varsha · Varanasi Sreeja</p>
 <div class="contrib"><div class="mono">MY CONTRIBUTION</div>
 <p style="color:var(--text);font-size:16px;margin:10px 0 0;line-height:1.7">I worked across all three modules of the platform and the pipeline that connects them. On State Policy Fit, I mapped government policies to startup eligibility criteria. On Contract Clause Analysis, I identified relevant clauses and flagged potential conflicts. On Statutory Compliance, I detected conflicts with state regulations and generated compliance advisories. I also built the compliance rule mapping, integrated the NLP pipeline end to end, tested and debugged the modules, and managed the GitHub repository.</p></div>
