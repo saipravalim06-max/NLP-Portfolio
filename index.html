@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Pravali Motamarri | NLP Portfolio</title>
+<meta name="description" content="NLP portfolio of Sai Pravali Motamarri (23MIC0086): class moments, Telugu morphology, a Vemana poem analysis, and the Compliance Intelligence Platform project.">
+<meta name="theme-color" content="#090b12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sai Pravali Motamarri | NLP Portfolio">
+<meta property="og:description" content="NLP portfolio of Sai Pravali Motamarri (23MIC0086): class moments, Telugu morphology, a Vemana poem analysis, and the Compliance Intelligence Platform project.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23b7f36b'/%3E%3Ctext x='32' y='44' font-size='32' font-weight='700' text-anchor='middle' font-family='Arial,sans-serif' fill='%2311170b'%3EAa%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@500;700&display=swap" rel="stylesheet">
@@ -80,9 +86,9 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 .project-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
 .project-links a{border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-size:12px}
 .footer{padding:60px 0 70px;text-align:center}
-.footer h2{font:600 clamp(35px,6vw,62px)/1 'Space Grotesk';letter-spacing:-.07em;margin:12px}
-.footer p{color:var(--muted);font-size:14px}
-.signature{color:var(--accent);font:12px 'DM Mono';margin-top:25px}
+.footer h2{font:600 clamp(42px,8vw,84px)/1 'Space Grotesk';letter-spacing:-.07em;margin:12px}
+.footer p{color:var(--muted);font-size:18px}
+.signature{color:var(--accent);font:13px 'DM Mono';margin-top:28px}
 .tb{margin:12px auto 0;max-width:380px;background:var(--surface2);border-radius:12px;padding:14px 16px;text-align:center}
 .tb-word{font:700 clamp(26px,5vw,36px)/1.25 'Noto Sans Telugu',sans-serif;color:var(--accent)}
 .tb-rom{font:11px 'DM Mono';color:var(--muted);letter-spacing:.05em}
@@ -114,6 +120,53 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 @media(max-width:760px){.media{grid-template-columns:1fr}.shot{aspect-ratio:4/3}}
 .sim{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.sim div{flex:1 1 180px;background:var(--surface2);border-radius:10px;padding:12px 14px}.sim b{display:block;font:600 24px 'Space Grotesk';color:var(--accent)}.sim span{font-size:12px;color:var(--muted)}
 .mt{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}.mt th,.mt td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}.mt th{font:11px 'DM Mono';color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.mt td:nth-child(2),.mt td:nth-child(3){color:var(--accent);white-space:nowrap}
+.nb{margin-top:16px;background:#0a0d17;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font:13px/1.8 'DM Mono',monospace;overflow-x:auto}
+.nb-l,.nb-c{white-space:nowrap}.nb-p{color:var(--muted);margin-right:14px}.nb code{font:inherit}.nb .s{color:var(--pink)}
+.nb-c{color:#6fa38a;padding-left:84px}.nb-o{margin-top:6px}.nb-o code{color:var(--accent)}
+.card,.et{transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 14px 36px #0005}
+.et:hover{transform:translateY(-2px)}
+.num{display:flex;align-items:center;gap:10px;color:var(--c,var(--accent))}
+.num:before{content:"";display:grid;place-items:center;width:28px;height:28px;border-radius:9px;font-size:14px;background:color-mix(in srgb,var(--c,var(--accent)) 16%,transparent);color:var(--c,var(--accent));border:1px solid color-mix(in srgb,var(--c,var(--accent)) 40%,transparent)}
+#class .num:before{content:"✎"}
+#language .num{--c:var(--accent2)}#language .num:before{content:"Aa";font:600 11px 'DM Mono'}
+#activities .num:before{content:"</>";font:600 10px 'DM Mono'}
+#project .num{--c:var(--accent2)}#project .num:before{content:"◆"}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:40;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.navlinks a.on{color:var(--accent);box-shadow:0 2px 0 var(--accent)}
+.eday{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:12px;margin-top:16px}
+.et{background:var(--surface2);border-radius:12px;padding:14px 16px;border-top:3px solid var(--accent)}
+.et:nth-child(even){border-top-color:var(--accent2)}
+.et .mono{color:var(--accent);font-size:10px}.et:nth-child(even) .mono{color:var(--accent2)}
+.et q{display:block;quotes:none;font:600 19px/1.3 'Space Grotesk';letter-spacing:-.03em;margin:8px 0 6px}
+.et p{font-size:13px;margin:0}
+.project{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin:26px 0 8px}
+.flow i{align-self:center;color:var(--muted);font-style:normal}
+.fn{flex:1 1 130px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:12px 14px}
+.fn:nth-of-type(even){border-top-color:var(--accent2)}
+.fn b{display:block;font:600 15px 'Space Grotesk'}.fn span{font-size:12px;color:var(--muted)}
+.pstats{display:flex;flex-wrap:wrap;gap:34px;margin:24px 0 6px}
+.pstats b{display:block;font:600 40px/1 'Space Grotesk';letter-spacing:-.05em;color:var(--accent)}
+.pstats div:nth-child(even) b{color:var(--accent2)}.pstats span{font-size:12px;color:var(--muted)}
+@media(max-width:760px){.flow i{display:none}.flow .fn{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.card,.et{transition:none}.card:hover,.et:hover{transform:none}}
+.et.wide{grid-column:span 2}.et p+p{margin-top:8px}
+.et p.nlp{font-size:12.5px;color:var(--text)}.et p.nlp b{font:10px 'DM Mono';color:var(--accent);letter-spacing:.06em;margin-right:8px}
+.ord{margin:8px 0 12px}.ord .lb{display:block;font:10px 'DM Mono';letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:10px 0 6px}
+.ord div{display:flex;gap:8px;flex-wrap:wrap}
+.ord i{font:normal 600 17px/1.2 'Space Grotesk';padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface)}
+.ord .te i{font-family:'Noto Sans Telugu','Space Grotesk',sans-serif}
+.ord small{display:block;font:10px 'DM Mono';color:var(--muted);margin-top:3px}
+.ord .s{border-color:var(--accent)}.ord .o{border-color:var(--accent2)}.ord .v{border-color:var(--pink)}
+@media(max-width:700px){.et.wide{grid-column:auto}}
+.footer .num{display:block;text-align:center;font:600 17px 'DM Mono';letter-spacing:.22em}
+.footer .num:before{display:none}
+.reflect{padding:34px clamp(22px,4vw,44px)}
+.reflect:before{content:"“";position:absolute;right:26px;top:-18px;font:700 150px/1 'Space Grotesk';color:var(--accent);opacity:.12;pointer-events:none}
+.card.reflect p{color:var(--text);font-size:18px;line-height:1.85;margin-top:14px;max-width:none}
+.totop{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--accent);font:600 20px 'DM Sans';cursor:pointer;z-index:30;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s,border-color .2s;box-shadow:0 8px 24px #0006}
+.totop.show{opacity:1;pointer-events:auto;transform:none}.totop:hover{border-color:var(--accent)}
 .te{font-family:'Noto Sans Telugu','DM Sans',sans-serif}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -122,6 +175,8 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 </style>
 </head>
 <body>
+<div class="progress" id="prog" aria-hidden="true"></div>
+<button class="totop" id="totop" type="button" aria-label="Back to top">↑</button>
 <header><nav class="wrap"><a class="brand" href="#home">sp<span>.</span>nlp</a>
 <div class="navlinks"><a href="#class">Classroom</a><a href="#language">Language</a><a href="#activities">Activities</a><a href="#project">Project</a></div>
 </nav></header>
@@ -151,7 +206,10 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 <article class="card half"><div class="row"><div class="icon">?</div><div><h3>Challenges in NLP</h3><p>Asked what challenges NLP faces, I answered <b>neologism</b>: new words appear every day, and a model has to keep up with words it has never seen.</p><div class="taglist"><span class="tag">NEOLOGISM</span><span class="tag">VOCABULARY</span><span class="tag">UNSEEN WORDS</span></div></div></div></article>
 <article class="card half"><div class="row"><div class="icon">Aa</div><div><h3>Morphology vocabulary</h3><p>Asked to list five terms from our morphology discussions, I named:</p><div class="taglist"><span class="tag">FINITE-STATE TRANSDUCERS</span><span class="tag">PARSING</span><span class="tag">LEXICAL</span><span class="tag">SYNTACTIC</span><span class="tag">INFLECTION</span></div></div></div></article>
 
-<article class="card full"><div class="row"><div class="icon">♂♀</div><div><h3>A question from the hands-on session</h3><p>During a hands-on session, while testing a name classifier, I asked why “Sai”, a name mostly used for men, was labelled female. Faculty’s conclusion: the classifier has limitations, because it only knows what its training data showed it.</p><div class="taglist"><span class="tag">CLASSIFICATION</span><span class="tag">BIAS</span><span class="tag">MODEL LIMITATIONS</span></div></div></div></article>
+<article class="card full"><div class="row"><div class="icon">♂♀</div><div><h3>A question from the hands-on session</h3><p>During a hands-on session, while testing a name classifier, I asked why “Sai”, a name mostly used for men, was labelled female. Faculty’s conclusion: the classifier has limitations, because it only knows what its training data showed it.</p><div class="taglist"><span class="tag">CLASSIFICATION</span><span class="tag">BIAS</span><span class="tag">MODEL LIMITATIONS</span></div><div class="nb" role="img" aria-label="Notebook cell: classifier.classify(gender_features('sai')) returns female">
+<div class="nb-l"><span class="nb-p">In [13]:</span><code>classifier.classify(gender_features(<span class="s">'sai'</span>))</code></div>
+<div class="nb-c">#sai can be a male name; one of the limitations of the classifier<br>#it classifies names ending with i automatically into female<br>#and names ending with sh for ex automatically into male</div>
+<div class="nb-l nb-o"><span class="nb-p">Out [13]:</span><code>'female'</code></div></div></div></div></article>
 </div>
 </section>
 
@@ -165,6 +223,19 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 <article class="card third"><div class="mono">LANGUAGE IS…</div><div class="big"><span>infinite.</span></div><p>Discussed in class. A few rules and a finite vocabulary can build sentences nobody has said before.</p></article>
 <article class="card third"><div class="mono">LANGUAGE IS…</div><div class="big"><span>identity.</span></div><p>Discussed in class. Our mother tongue carries where we come from.</p></article>
 
+<article class="card full"><div class="mono">NLP IN EVERYDAY LANGUAGE</div><h3>Where the concepts show up in real life</h3>
+<div class="eday">
+<div class="et"><div class="mono">NEOLOGISM</div><q>doomscrolling</q><p>A word that did not exist a few years ago. In class I said new words appear every day.</p><p class="nlp"><b>IN NLP</b>A model trained on older text may never have seen the word, so it cannot place its meaning.</p></div>
+<div class="et"><div class="mono">INFORMAL LANGUAGE</div><q>brb · idk · tbh</q><p>Texting shortens words and drops letters.</p><p class="nlp"><b>IN NLP</b>A system has to expand these (be right back, I don’t know) before it can read the message properly.</p></div>
+<div class="et"><div class="mono">AMBIGUOUS WORDS</div><q>bat: animal / sports equipment</q><p>One spelling, two unrelated meanings.</p><p class="nlp"><b>IN NLP</b>The system has to pick the right sense. This is called word sense disambiguation.</p></div>
+<div class="et"><div class="mono">CONTEXT · THE FIX</div><q>river bank / bank loan</q><p>The words around a word tell you which meaning is meant.</p><p class="nlp"><b>IN NLP</b>Models read the neighbouring words, which is why contextual embeddings like BERT beat fixed word vectors.</p></div>
+<div class="et wide"><div class="mono">LANGUAGE VARIATION</div><q>Same idea, different word order</q>
+<div class="ord"><span class="lb">Telugu · Subject – Object – Verb</span><div class="te"><i class="s">నేను<small>I · subject</small></i><i class="o">అన్నం<small>rice · object</small></i><i class="v">తింటాను<small>eat · verb</small></i></div>
+<span class="lb">English · Subject – Verb – Object</span><div><i class="s">I<small>subject</small></i><i class="v">eat<small>verb</small></i><i class="o">rice<small>object</small></i></div></div>
+<p>Languages arrange the same ideas in different orders. Telugu puts the verb last.</p><p class="nlp"><b>IN NLP</b>A translator cannot swap words one by one. It has to rearrange the whole sentence.</p></div>
+<div class="et"><div class="mono">REGIONAL LANGUAGES</div><q>22 scheduled languages</q><p>India has many languages, and a lot of them have far less data than English.</p><p class="nlp"><b>IN NLP</b>This is why models like IndicBERT and IndicTrans2 were built, to close the gap.</p></div>
+</div>
+</article>
 <article class="card full"><div class="mono te">MOTHER TONGUE · TELUGU</div><h3>Understanding language through my own.</h3><p>Telugu builds new words by attaching small meaningful pieces to a root. Pick a word, then press the button to see how its meaning flips.</p>
 <div class="taglist te" id="tbPick" style="justify-content:center;margin:16px 0 0">
 <button type="button" class="tag pick on" data-i="0">ఆరోగ్యం</button><button type="button" class="tag pick" data-i="1">గుణము</button><button type="button" class="tag pick" data-i="2">న్యాయం</button></div>
@@ -217,20 +288,32 @@ a.card:hover,.resource:hover .arrow{border-color:var(--accent)}
 
 <section id="project" class="reveal">
 <div class="section-head"><div><div class="num">04 / PROJECT</div><h2>Built to solve<br>a real problem.</h2></div><p>The NLP project our team built for the course.</p></div>
-<div class="project"><div class="eyebrow"><i class="dot"></i> NLP PROJECT · TEAM OF THREE</div>
+<div class="project"><div class="eyebrow"><i class="dot"></i> FEATURED PROJECT · TEAM OF THREE</div>
 <h3>Compliance Intelligence Platform</h3>
 <p>An NLP-based approach to contract compliance and state policy analysis. It combines NLP with rule-based reasoning to check contract clauses against internal policies and state regulations, and shows the supporting clause as evidence.</p>
+<div class="flow" aria-label="How the platform works">
+<div class="fn"><b>Input</b><span>Profile, contract, policies</span></div><i>→</i>
+<div class="fn"><b>Split</b><span>Clauses and requirements</span></div><i>→</i>
+<div class="fn"><b>Retrieve</b><span>Embeddings find related text</span></div><i>→</i>
+<div class="fn"><b>Compare</b><span>Rules check numbers and permissions</span></div><i>→</i>
+<div class="fn"><b>Verdict</b><span>A label with the evidence</span></div>
+</div>
 <div class="mods">
 <div class="card"><div class="mono">MODULE 1</div><h3>State Fit Advisor</h3><p>Evaluates a company profile against 93 state policy requirements and marks each one PASS, FAIL, UNKNOWN or POTENTIAL.</p></div>
 <div class="card"><div class="mono">MODULE 2</div><h3>Contract vs Internal Policies</h3><p>Finds clauses that clash with internal policy. Example: a 30-day termination notice against a 60-day minimum.</p></div>
 <div class="card"><div class="mono">MODULE 3</div><h3>Contract vs State Regulations</h3><p>Retrieves relevant regulations and flags possible conflicts for legal review, with source references.</p></div>
 </div>
-<div class="taglist"><span class="tag">93 STATE REQUIREMENTS</span><span class="tag">CUAD · 510 CONTRACTS</span><span class="tag">21 SYNTHETIC INTERNAL POLICIES</span><span class="tag">SENTENCE-TRANSFORMERS + RULE-BASED CONFLICT ENGINE</span><span class="tag">TAMIL NADU + KARNATAKA</span><span class="tag">STREAMLIT INTERFACE</span></div>
+<div class="pstats"><div><b>3</b><span>modules</span></div><div><b>93</b><span>state requirements · TN + KA</span></div><div><b>21</b><span>synthetic policies</span></div><div><b>510</b><span>CUAD contracts</span></div></div>
+<div class="taglist" style="margin-top:20px"><span class="mono" style="align-self:center;margin-right:6px">BUILT WITH</span><span class="tag">PYTHON</span><span class="tag">STREAMLIT</span><span class="tag">SENTENCE-TRANSFORMERS</span><span class="tag">PYTORCH</span><span class="tag">PYMUPDF</span><span class="tag">PYTHON-DOCX</span><span class="tag">PANDAS</span><span class="tag">PYTEST</span><span class="tag">GIT · GITHUB</span></div>
 <div class="media"><div class="vid"><iframe src="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/preview" title="Compliance Intelligence Platform demo video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><figure class="shot"><img src="./presenting.jpeg" alt="Presenting the Compliance Intelligence Platform to the class" loading="eager"><figcaption>Presenting the project in class</figcaption></figure></div>
 <p class="mono" style="margin:22px 0 4px">TEAM</p><p style="margin:0;color:var(--text)">Sai Pravali Motamarri · G. Varsha · Varanasi Sreeja</p>
 <div class="contrib"><div class="mono">MY CONTRIBUTION</div>
 <p style="color:var(--text);font-size:16px;margin:10px 0 0;line-height:1.7">I worked across all three modules of the platform and the pipeline that connects them. On State Policy Fit, I mapped government policies to startup eligibility criteria. On Contract Clause Analysis, I identified relevant clauses and flagged potential conflicts. On Statutory Compliance, I detected conflicts with state regulations and generated compliance advisories. I also built the compliance rule mapping, integrated the NLP pipeline end to end, tested and debugged the modules, and managed the GitHub repository.</p></div>
-<div class="project-links"><a href="COMPLIANCE-INTELLIGENCE-PLATFORM.pptx" download>▤ Download the slides</a><a href="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/view?usp=sharing" target="_blank" rel="noopener">▶ Watch the demo video ↗</a><a href="NLP_Project_Write_up.pdf" target="_blank" rel="noopener">❏ Read the write-up</a></div></div>
+<div class="project-links"><a href="COMPLIANCE-INTELLIGENCE-PLATFORM.pptx" download>▤ Download the slides</a><a href="https://drive.google.com/file/d/15l4C2Jb5UXSUahgaWs1ytFXw5qML9Gu5/view?usp=sharing" target="_blank" rel="noopener">▶ Watch the demo video ↗</a><a href="NLP_Project_Write_up.pdf" target="_blank" rel="noopener">❏ Read the write-up</a><a href="https://github.com/saipravalim06-max/compliance-intel" target="_blank" rel="noopener">⌥ GitHub · compliance-intel ↗</a></div></div>
+</section>
+
+<section id="reflection" class="reveal" style="padding:60px 0 30px">
+<div class="card full reflect"><div class="mono">WHAT I TOOK AWAY</div><p>When I started this course, I knew NLP was about making computers understand human language, but I didn’t realise how challenging that actually was. The concepts we learned and the discussions we had in class made me curious to explore more about how language works and how machines process it. I began to notice that even something as simple as understanding a word can involve context, structure and meaning. This course made me appreciate the complexity of language and the effort that goes into teaching machines to understand it.</p></div>
 </section>
 
 <section class="footer reveal"><div class="num">THANK YOU</div><h2>Language is<br><span style="color:var(--accent)">worth asking about.</span></h2><p>Every question in class taught me something about how machines read us.</p>
@@ -256,6 +339,12 @@ document.querySelectorAll('.pick').forEach((b,k)=>b.classList.toggle('on',k==tbI
 g('tbBtn').addEventListener('click',()=>{tbOn=!tbOn;tbDraw()});
 document.querySelectorAll('.pick').forEach(b=>b.addEventListener('click',()=>{tbI=+b.dataset.i;tbOn=false;tbDraw()}));
 tbDraw();
+const secIds=['class','language','activities','project'],secEls=secIds.map(i=>document.getElementById(i)),navA=[...document.querySelectorAll('.navlinks a')],bar=document.getElementById('prog');
+function onScr(){const h=document.documentElement,mx=h.scrollHeight-h.clientHeight;bar.style.width=(mx>0?h.scrollTop/mx*100:0)+'%';let cur='';secEls.forEach(e=>{if(e.getBoundingClientRect().top<=140)cur=e.id});navA.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))}
+const topBtn=document.getElementById('totop');
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+function onScr2(){topBtn.classList.toggle('show',document.documentElement.scrollTop>700)}
+addEventListener('scroll',()=>{onScr();onScr2()},{passive:true});onScr();onScr2();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
